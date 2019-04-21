@@ -14,6 +14,11 @@
         <module>guns-rest</module>
         <module>guns-generator</module>
         <module>wangdao-film-test</module>
+        <module>wangdao-film-cinema</module>
+        <module>wangdao-film-film</module>
+        <module>wangdao-film-order</module>
+        <module>wangdao-film-pay</module>
+        <module>wangdao-film-user</module>
     </modules>
 
     <parent>

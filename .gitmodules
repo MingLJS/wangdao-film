@@ -4,4 +4,15 @@
 [submodule "wangdao-film-film"]
 	path = wangdao-film-film
 	url = https://github.com/ThasGit/wangdao-film-film.git
-	branch = master
+[submodule "wangdao-film-user"]
+	path = wangdao-film-user
+	url = https://github.com/ThasGit/wangdao-film-user.git
+[submodule "wangdao-film-cinema"]
+	path = wangdao-film-cinema
+	url = https://github.com/ThasGit/wangdao-film-cinema.git
+[submodule "wangdao-film-pay"]
+	path = wangdao-film-pay
+	url = https://github.com/ThasGit/wangdao-film-pay.git
+[submodule "wangdao-film-order"]
+	path = wangdao-film-order
+	url = https://github.com/ThasGit/wangdao-film-order.git
