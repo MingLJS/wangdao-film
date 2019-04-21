@@ -13,7 +13,6 @@
         <module>guns-core</module>
         <module>guns-rest</module>
         <module>guns-generator</module>
-        <module>wangdao-film-test</module>
         <module>wangdao-film-cinema</module>
         <module>wangdao-film-film</module>
         <module>wangdao-film-order</module>
@@ -48,6 +47,7 @@
         <mysql-connector-java.version>8.0.11</mysql-connector-java.version>
         <jwt.version>0.9.0</jwt.version>
         <hutool.version>4.1.1</hutool.version>
+        <log4j.version>1.2.17</log4j.version>
     </properties>
 
     <dependencyManagement>
@@ -170,6 +170,11 @@
                 <groupId>cn.hutool</groupId>
                 <artifactId>hutool-all</artifactId>
                 <version>${hutool.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>log4j</groupId>
+                <artifactId>log4j</artifactId>
+                <version>${log4j.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
