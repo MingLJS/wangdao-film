@@ -1,3 +1,7 @@
 [submodule "wangdao-film-test"]
 	path = wangdao-film-test
 	url = https://github.com/ThasGit/wangdao-film-test.git
+[submodule "wangdao-film-film"]
+	path = wangdao-film-film
+	url = https://github.com/ThasGit/wangdao-film-film.git
+	branch = master
