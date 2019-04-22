@@ -18,6 +18,7 @@
         <module>wangdao-film-order</module>
         <module>wangdao-film-pay</module>
         <module>wangdao-film-user</module>
+        <module>wangdao-film-user-api</module>
     </modules>
 
     <parent>
@@ -49,6 +50,7 @@
         <hutool.version>4.1.1</hutool.version>
         <log4j.version>1.2.17</log4j.version>
         <dubbo.version>2.7.1</dubbo.version>
+        <wangdao-user-api.version>0.0.1</wangdao-user-api.version>
     </properties>
 
     <dependencyManagement>
@@ -213,6 +215,11 @@
                 <artifactId>dubbo-dependencies-zookeeper</artifactId>
                 <version>${dubbo.version}</version>
                 <type>pom</type>
+            </dependency>
+            <dependency>
+                <groupId>com.cskaoyan</groupId>
+                <artifactId>wangdao-film-user-api</artifactId>
+                <version>${wangdao-user-api.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

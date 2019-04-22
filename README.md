@@ -16,13 +16,33 @@ push的时候只需要push自己开发的子模块即可。
 本地项目初始化：
 1. 执行`git clone https://github.com/ThasGit/wangdao-film.git  --recursive`命令，将git项目克隆到本地，`--recursive`代表递归克隆子模块，不加这个命令得手动clone子模块，会很麻烦。
 2. 打开`IDEA`,选择`File -> New -> Project From Existing Sources...`，选择父模块的pom文件，即`wangdao-film`模块的pom文件，这样将会初始化整个项目，包括附属的子模块。
-3. 参照`guns-rest`初始化自己模块的结构。
+3. 选择 `Settings -> Version Control`, 将父模块`wangdao-film`移除。这是因为`IDEA`对git子模块的支持不到位。每一个子模块都是独立的git仓库，在模块上右键选择`git`进行操作。
+4. 参照`guns-rest`初始化自己模块的结构。
 
 不要选择直接从`File -> New -> Project From Version Control -> Git`，它不会组织Maven项目结构。
 
 任务初步分配：
-1. 影院管理：6 朱明轩 范恩华 刘浩然
-2. 影片管理：8 谢陈成 段晓慧 徐梓淳 
-3. 用户管理：1 徐梓淳 
+1. 影院管理：6表4接口 刘浩然 谢陈成  徐梓淳 
+2. 影片管理：8表4接口 朱明轩 范恩华 段晓慧 
+3. 用户管理：1表6功能 谢陈成 
 
-具体任务安排以小组讨论结果为准
+基础包`com.cskaoyan.wangdaofilm.` + `模块名`。
+
+代码**不要全部放在自动生成的默认的`com.stylefeng.guns`下面**，`IDEA`对全限定名完全一致的类处理上有bug，可能你改了自己的一个类名，别人的模块中的相同类名的类也被跟着改掉。
+
+另外spring扫包时，会扫描到其他模块下的相同包，如果包下还存在相同名称的类，会造成重复注入的问题。
+
+项目结构，参考guns：
+```
+com.cskaoyan.wangdaofilm.user
+ -- common 模块无关的类或工具
+      -- persistence 持久层，dao层及模型
+ -- config 配置相关
+ -- modular 模块相关
+      -- 模块名
+           -- controller 模块控制器
+                 -- dto 表现层对象传输模型
+           -- service 服务层
+                 -- dto 服务层对象传输模型
+```
+

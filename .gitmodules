@@ -13,3 +13,6 @@
 [submodule "wangdao-film-order"]
 	path = wangdao-film-order
 	url = https://github.com/ThasGit/wangdao-film-order.git
+[submodule "wangdao-film-user-api"]
+	path = wangdao-film-user-api
+	url = https://github.com/ThasGit/wangdao-film-user-api.git
