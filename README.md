@@ -2,6 +2,19 @@
 
 本项目为王道Java实战项目4——Meeting院线的父模块，只用作组织项目结构，除非有特殊情况，**不要提交任何变更到本仓库**
 
+父模块：
+[王道项目4——Meeting院线](https://github.com/ThasGit/wangdao-film)
+
+网关模块：
+[王道项目4——Meeting院线——API网关](https://github.com/ThasGit/wangdao-film-gateway)
+
+5个网关模块与服务子模块的公共依赖接口：
+1. [王道项目4——Meeting院线——影院管理公共接口子模块](https://github.com/ThasGit/wangdao-film-cinema-api)
+2. [王道项目4——Meeting院线——影片管理公共接口子模块](https://github.com/ThasGit/wangdao-film-film-api)
+3. [王道项目4——Meeting院线——用户管理公共接口子模块](https://github.com/ThasGit/wangdao-film-user-api)
+4. [王道项目4——Meeting院线——支付管理公共接口子模块](https://github.com/ThasGit/wangdao-film-pay-api)
+5. [王道项目4——Meeting院线——订单管理公共接口子模块](https://github.com/ThasGit/wangdao-film-order-api)
+
 涉及的5个子模块均已做成git子模块，对应的github项目为：
 1. [王道项目4——Meeting院线——影院管理子模块](https://github.com/ThasGit/wangdao-film-cinema)
 2. [王道项目4——Meeting院线——影片管理子模块](https://github.com/ThasGit/wangdao-film-film)
@@ -32,7 +45,7 @@ push的时候只需要push自己开发的子模块即可。
 
 另外spring扫包时，会扫描到其他模块下的相同包，如果包下还存在相同名称的类，会造成重复注入的问题。
 
-项目结构，参考guns：
+包结构，参考guns：
 ```
 com.cskaoyan.wangdaofilm.user
  -- common 模块无关的类或工具
@@ -45,4 +58,12 @@ com.cskaoyan.wangdaofilm.user
            -- service 服务层
                  -- dto 服务层对象传输模型
 ```
+
+网关模块和微服务子模块的公共接口和传输对象统一放在`wangdao-film-*-api`模块中，共同依赖。注意传输对象一定实现`java.io.Serializable`接口。
+
+Dubbo暴露服务的接口设置为-1即可，自动选择端口。扫描包一定要配置`dubbo.scan.base-packages`，否则dubbo服务不会注册到zookeeper。
+
+子模块因为因为依赖了`guns-core`模块，不得不启动`tomcat`容器，`server.port`同样设置为-1，以免多模块同时启动时端口冲突。
+
+本地环境配置放在`application-local.yml`文件中，根据maven选定的`profile`会启用对应的spring环境。不要修改`application.yml`公共文件。
 
