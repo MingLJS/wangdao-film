@@ -19,3 +19,9 @@
 [submodule "wangdao-film-gateway"]
 	path = wangdao-film-gateway
 	url = https://github.com/ThasGit/wangdao-film-gateway.git
+[submodule "wangdao-film-film-api"]
+	path = wangdao-film-film-api
+	url = https://github.com/ThasGit/wangdao-film-film-api.git
+[submodule "wangdao-film-cinema-api"]
+	path = wangdao-film-cinema-api
+	url = https://github.com/ThasGit/wangdao-film-cinema-api.git

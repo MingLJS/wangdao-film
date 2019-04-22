@@ -20,6 +20,8 @@
         <module>wangdao-film-pay</module>
         <module>wangdao-film-user</module>
         <module>wangdao-film-user-api</module>
+        <module>wangdao-film-film-api</module>
+        <module>wangdao-film-cinema-api</module>
     </modules>
 
     <parent>
@@ -52,6 +54,8 @@
         <log4j.version>1.2.17</log4j.version>
         <dubbo.version>2.7.1</dubbo.version>
         <wangdao-user-api.version>0.0.1</wangdao-user-api.version>
+        <wangdao-film-api.version>0.0.1</wangdao-film-api.version>
+        <wangdao-cinema-api.version>0.0.1</wangdao-cinema-api.version>
     </properties>
 
     <dependencyManagement>
@@ -221,6 +225,16 @@
                 <groupId>com.cskaoyan</groupId>
                 <artifactId>wangdao-film-user-api</artifactId>
                 <version>${wangdao-user-api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.cskaoyan</groupId>
+                <artifactId>wangdao-film-film-api</artifactId>
+                <version>${wangdao-film-api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.cskaoyan</groupId>
+                <artifactId>wangdao-film-cinema-api</artifactId>
+                <version>${wangdao-cinema-api.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
