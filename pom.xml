@@ -54,9 +54,12 @@
         <log4j.version>1.2.17</log4j.version>
         <dubbo.version>2.7.1</dubbo.version>
         <hystrix.version>2.0.0.RELEASE</hystrix.version>
+        <lombok.version>1.14.8</lombok.version>
         <wangdao-user-api.version>0.0.1</wangdao-user-api.version>
         <wangdao-film-api.version>0.0.1</wangdao-film-api.version>
         <wangdao-cinema-api.version>0.0.1</wangdao-cinema-api.version>
+        <wangdao-order-api.version>0.0.1</wangdao-order-api.version>
+        <wangdao-pay-api.version>0.0.1</wangdao-pay-api.version>
     </properties>
 
     <dependencyManagement>
@@ -228,6 +231,12 @@
                 <version>${hystrix.version}</version>
             </dependency>
             <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
                 <groupId>com.cskaoyan</groupId>
                 <artifactId>wangdao-film-user-api</artifactId>
                 <version>${wangdao-user-api.version}</version>
@@ -241,6 +250,16 @@
                 <groupId>com.cskaoyan</groupId>
                 <artifactId>wangdao-film-cinema-api</artifactId>
                 <version>${wangdao-cinema-api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.cskaoyan</groupId>
+                <artifactId>wangdao-film-order-api</artifactId>
+                <version>${wangdao-order-api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.cskaoyan</groupId>
+                <artifactId>wangdao-film-pay-api</artifactId>
+                <version>${wangdao-pay-api.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

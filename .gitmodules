@@ -25,3 +25,9 @@
 [submodule "wangdao-film-cinema-api"]
 	path = wangdao-film-cinema-api
 	url = https://github.com/ThasGit/wangdao-film-cinema-api.git
+[submodule "wangdao-film-order-api"]
+	path = wangdao-film-order-api
+	url = https://github.com/ThasGit/wangdao-film-order-api.git
+[submodule "wangdao-film-pay-api"]
+	path = wangdao-film-pay-api
+	url = https://github.com/ThasGit/wangdao-film-pay-api.git
